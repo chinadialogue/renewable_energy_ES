@@ -907,7 +907,7 @@
       <span id="toggleConsole">
         <img src="./img/toggle.png" />
       </span>
-      <h1 id='title'>Renewable Energy Map</h1>
+      <h1 id='title'></h1>
       <div class="tab-slider--nav">
         <ul class="tab-slider--tabs">
           <li class="tab-slider--trigger activeTab text" rel="tab1">Fuente</li>
@@ -1177,14 +1177,14 @@
         $("#toggleConsole img").toggleClass("flip");
       });
 
-      $("#toggleConsole").css("top", 220);
+      $("#toggleConsole").css("top", 205);
 
       if (medium) {
-        $("#toggleConsole").css("top", 180);
+        $("#toggleConsole").css("top", 160);
       }
 
       if (mobile) {
-        $("#toggleConsole").css("top", 105);
+        $("#toggleConsole").css("top", 85);
       }
 
 
@@ -1302,7 +1302,6 @@
         }
       });
 
-      // map.setFilter('plants', ['all', statusFilter,fuelFilter,capacityFilter]);
 
 
       $("#start").html(min + 'MW');
@@ -1483,14 +1482,15 @@
         }
 
         if (tab1) {
-          $("#toggleConsole").css("top", 330);
-          if (medium) {
-            $("#toggleConsole").css("top", 280);
-          }
+          $("#toggleConsole").css("top", 205);
 
-          if (mobile) {
-            $("#toggleConsole").css("top", 180);
-          }
+        if (medium) {
+          $("#toggleConsole").css("top", 160);
+        }
+
+        if (mobile) {
+          $("#toggleConsole").css("top", 85);
+        }
 
           map.setPaintProperty('plants', "circle-color", [
             "case",
@@ -1504,14 +1504,15 @@
 
         } else {
 
-          $("#toggleConsole").css("top", 310);
-          if (medium) {
-            $("#toggleConsole").css("top", 260);
-          }
+          $("#toggleConsole").css("top", 205);
 
-          if (mobile) {
-            $("#toggleConsole").css("top", 170);
-          }
+        if (medium) {
+          $("#toggleConsole").css("top", 160);
+        }
+
+        if (mobile) {
+          $("#toggleConsole").css("top", 85);
+        }
 
 
           map.setPaintProperty('plants', "circle-color", [
