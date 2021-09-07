@@ -1410,8 +1410,8 @@
         fuelFilter = ["in", ["get", "source"], ["literal", activeFuels]];
         capacityFilter = ['>=', ['get', 'capacity'], 0.02];
         map.setFilter('plants', ['all', statusFilter, fuelFilter, capacityFilter]);
-        sliderValG = 1;
-        $("#slider").val(1);
+        sliderValG = 0.02;
+        $("#slider").val(0.02);
         $("#slider").trigger('change');
         document.getElementById('selectedCapacity').innerText = 0.02;
 
