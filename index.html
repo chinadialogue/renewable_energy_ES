@@ -695,7 +695,7 @@
       margin-top: 10px;
     }
 
-    #start{
+    #start {
       position: relative;
       display: inline;
       margin-top: 10px;
@@ -703,7 +703,7 @@
       font-size: 14px;
     }
 
-    #end{
+    #end {
       position: relative;
       display: inline;
       margin-top: 10px;
@@ -774,12 +774,12 @@
         margin-left: -20px !important;
       }
 
-      #start{
+      #start {
         margin-left: 0px;
         font-size: 11px;
       }
 
-      #end{
+      #end {
         margin-left: 90px;
         font-size: 12px;
       }
@@ -868,7 +868,7 @@
         font-size: 11px;
       }
 
-      #end{
+      #end {
         margin-left: 90px;
         font-size: 11px;
       }
@@ -898,7 +898,7 @@
       .mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
       .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip,
       .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip {
-        display:none !important;
+        display: none !important;
       }
     }
   </style>
@@ -1162,7 +1162,7 @@
 
       map = new mapboxgl.Map({
         container: 'map', // container element id
-        style: 'mapbox://styles/jhjanicki/ck45itf9g23631drw9j74nl8o',
+        style: 'mapbox://styles/jhjanicki/ck4amjwp70mvx1co94b6q9pby',
         center: [-71.320135, -14.592424], // initial map center in [lon, lat]
         zoom: 2,
         minZoom: 2
@@ -1172,7 +1172,7 @@
 
       map = new mapboxgl.Map({
         container: 'map', // container element id
-        style: 'mapbox://styles/jhjanicki/ck45itf9g23631drw9j74nl8o',
+        style: 'mapbox://styles/jhjanicki/ck4amjwp70mvx1co94b6q9pby',
         center: [-71.320135, -14.592424], // initial map center in [lon, lat]
         zoom: 2,
         minZoom: 2
@@ -1260,7 +1260,7 @@
             "#a8ddb5",
             ["==", ["get", "source"], 'Solar'],
             "#fdbb84",
-            ["==",["get","source"],"Geotermia"],
+            ["==", ["get", "source"], "Geotermia"],
             "#ef3b2c",
             "#2b8cbe"
           ],
@@ -1328,7 +1328,7 @@
         document.getElementById(filterName).addEventListener('change', function (e) {
           // update the map filter
           if (e.target.value === layerOnName) {
-            
+
             //if layer doesn't exist then push
             if (activeFuels.indexOf(fuelString) == -1) {
               activeFuels.push(fuelString)
@@ -1352,7 +1352,7 @@
           }
         });
       }
-  
+
       createFilterFuel('filter1', 'layer1On', 'Eólica')
       createFilterFuel('filter2', 'layer2On', 'Solar')
       createFilterFuel('filter3', 'layer3On', 'Geotermia')
@@ -1441,13 +1441,13 @@
         if (tab1) {
           $("#toggleConsole").css("top", 240);
 
-        if (medium) {
-          $("#toggleConsole").css("top", 215);
-        }
+          if (medium) {
+            $("#toggleConsole").css("top", 215);
+          }
 
-        if (mobile) {
-          $("#toggleConsole").css("top", 115);
-        }
+          if (mobile) {
+            $("#toggleConsole").css("top", 115);
+          }
 
           map.setPaintProperty('plants', "circle-color", [
             "case",
@@ -1498,8 +1498,8 @@
 
       document.getElementById('slider').addEventListener('input', function (e) {
         var sliderVal = +e.target.value;
-        if(sliderVal > 1){
-            sliderVal = Math.round(sliderVal);
+        if (sliderVal > 1) {
+          sliderVal = Math.round(sliderVal);
         }
         sliderValG = sliderVal;
 
@@ -1551,10 +1551,10 @@
           } else if (source == 'Solar') {
             color = "#fdbb84";
             popupClass = "color2";
-          } else if(source == 'Geotermia'){
+          } else if (source == 'Geotermia') {
             color = "#ef3b2c";
             popupClass = "color3";
-          }else{
+          } else {
             color = "#2b8cbe";
             popupClass = "color7";
           }
@@ -1577,7 +1577,7 @@
             closeOnClick: true,
             className: popupClass
           })
-          .setHTML('<h3 class="popupClass"><b>' + name + '</b></h3>'
+            .setHTML('<h3 class="popupClass"><b>' + name + '</b></h3>'
               + '<h4><b>País</b>: ' + country + '<br>'
               + '<b>Ubicación</b>: ' + location + '<br>'
               + '<b>Fonte de energia</b>: ' + source + '<br>'
@@ -1596,7 +1596,7 @@
             closeOnClick: true,
             className: popupClass
           })
-          .setHTML('<h3 class="popupClass"><b>' + name + '</b></h3>'
+            .setHTML('<h3 class="popupClass"><b>' + name + '</b></h3>'
               + '<h4><b>País</b>: ' + country + '<br>'
               + '<b>Ubicación</b>: ' + location + '<br>'
               + '<b>Fonte de energia</b>: ' + source + '<br>'
@@ -1660,10 +1660,10 @@
           } else if (source == 'Solar') {
             color = "#fdbb84";
             popupClass = "color2";
-          } else if(source == 'Geotermia'){
+          } else if (source == 'Geotermia') {
             color = "#ef3b2c";
             popupClass = "color3";
-          }else{
+          } else {
             color = "#2b8cbe";
             popupClass = "color7";
           }
@@ -1686,7 +1686,7 @@
             closeOnClick: true,
             className: popupClass
           })
-          .setHTML('<h3 class="popupClass"><b>' + name + '</b></h3>'
+            .setHTML('<h3 class="popupClass"><b>' + name + '</b></h3>'
               + '<h4><b>País</b>: ' + country + '<br>'
               + '<b>Ubicación</b>: ' + location + '<br>'
               + '<b>Fonte de energia</b>: ' + source + '<br>'
@@ -1705,7 +1705,7 @@
             closeOnClick: true,
             className: popupClass
           })
-          .setHTML('<h3 class="popupClass"><b>' + name + '</b></h3>'
+            .setHTML('<h3 class="popupClass"><b>' + name + '</b></h3>'
               + '<h4><b>País</b>: ' + country + '<br>'
               + '<b>Ubicación</b>: ' + location + '<br>'
               + '<b>Fonte de energia</b>: ' + source + '<br>'
